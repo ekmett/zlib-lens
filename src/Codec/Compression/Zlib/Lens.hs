@@ -60,9 +60,12 @@ module Codec.Compression.Zlib.Lens
 
 import Control.Applicative
 import Codec.Compression.Zlib.Internal
-import Control.Lens
 import qualified Data.ByteString      as S (ByteString)
 import qualified Data.ByteString.Lazy as L (ByteString)
+import Data.Profunctor (Profunctor(dimap))
+
+type Lens' s a = Functor f => (a -> f a) -> s -> f s
+type Iso' s a = (Functor f, Profunctor p) => p a (f a) -> p s (f s)
 
 -- |
 -- The 'zlib' compression format.
@@ -161,7 +164,7 @@ deflated' = compressed' deflate
 -- |
 -- Compresses a 'L.ByteString' using the given compression format and the given advanced parameters.
 compressed' :: Format -> Params -> Iso' L.ByteString L.ByteString
-compressed' fmt (Params c d) = iso (compress fmt c) (decompress fmt d)
+compressed' fmt (Params c d) = dimap (compress fmt c) (fmap (decompress fmt d))
 {-# INLINE compressed' #-}
 
 -- |
