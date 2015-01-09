@@ -2,7 +2,8 @@ name:                zlib-lens
 version:             0.1.1.1
 synopsis:            Lenses for zlib
 description:         Lenses for zlib
-homepage:            lens.github.io
+homepage:            http://lens.github.io/
+bug-reports:         http://github.com/ekmett/zlib-lens/issues
 license:             BSD3
 license-file:        LICENSE
 author:              Edward Kmett and Eric Mertens
