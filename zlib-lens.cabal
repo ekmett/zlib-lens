@@ -1,13 +1,13 @@
 name:                zlib-lens
-version:             0.1.1
+version:             0.1.1.1
 synopsis:            Lenses for zlib
--- description:
+description:         Lenses for zlib
 homepage:            lens.github.io
 license:             BSD3
 license-file:        LICENSE
--- author:
-maintainer:
--- copyright:
+author:              Edward Kmett and Eric Mertens
+maintainer:          Edward Kmett <ekmett@gmail.com>
+copyright:           (C) 2014 Edward Kmett and Eric Mertens
 category:            Codec
 build-type:          Simple
 extra-source-files:  README.md
