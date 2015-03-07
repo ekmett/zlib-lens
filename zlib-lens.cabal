@@ -11,7 +11,7 @@ maintainer:          Edward Kmett <ekmett@gmail.com>
 copyright:           (C) 2014 Edward Kmett and Eric Mertens
 category:            Codec
 build-type:          Simple
-extra-source-files:  README.md
+extra-source-files:  README.markdown CHANGELOG.markdown
 cabal-version:       >=1.10
 
 source-repository head
