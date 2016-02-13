@@ -64,8 +64,8 @@ import qualified Data.ByteString      as S (ByteString)
 import qualified Data.ByteString.Lazy as L (ByteString)
 import Data.Profunctor (Profunctor(dimap))
 
-type Lens' s a = Functor f => (a -> f a) -> s -> f s
-type Iso' s a = (Functor f, Profunctor p) => p a (f a) -> p s (f s)
+type Lens' s a = forall p f. Functor f => (a -> f a) -> s -> f s
+type Iso' s a = forall p f. (Functor f, Profunctor p) => p a (f a) -> p s (f s)
 
 -- |
 -- The 'zlib' compression format.
