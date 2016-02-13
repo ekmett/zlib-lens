@@ -1,5 +1,5 @@
 name:                zlib-lens
-version:             0.1.2
+version:             0.1.2.1
 synopsis:            Lenses for zlib
 description:         Lenses for zlib
 homepage:            http://lens.github.io/
